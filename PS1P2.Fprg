@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="erich"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-24 09:00:50 PM"/>
+        <attribute name="created" value="ZXJpY2g7TEFQVE9QLUtMVDI4RzVJOzIwMjItMDktMjQ7MDg6NTE6MzUgUE07Mjg1Nw=="/>
+        <attribute name="edited" value="ZXJpY2g7TEFQVE9QLUtMVDI4RzVJOzIwMjItMDktMjQ7MDk6MDA6NTAgUE07MTsyOTU3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="LN1" type="String" array="False" size=""/>
+            <declare name="s1" type="Real" array="False" size=""/>
+            <declare name="s2" type="Real" array="False" size=""/>
+            <declare name="A" type="Real" array="False" size=""/>
+            <input variable="LN1"/>
+            <input variable="s1"/>
+            <input variable="s2"/>
+            <assign variable="A" expression="(s1 + s2) /2"/>
+            <output expression="LN1" newline="True"/>
+            <output expression="A" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="erich"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-24 09:05:28 PM"/>
+        <attribute name="created" value="ZXJpY2g7TEFQVE9QLUtMVDI4RzVJOzIwMjItMDktMjQ7MDk6MDA6NTQgUE07Mjg1Mw=="/>
+        <attribute name="edited" value="ZXJpY2g7TEFQVE9QLUtMVDI4RzVJOzIwMjItMDktMjQ7MDk6MDU6MjggUE07MTsyOTY3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="g1" type="Real" array="False" size=""/>
+            <declare name="m1" type="Real" array="False" size=""/>
+            <declare name="mpg" type="Real" array="False" size=""/>
+            <input variable="m1"/>
+            <input variable="g1"/>
+            <assign variable="mpg" expression="m1/g1"/>
+            <output expression="mpg" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="erich"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-24 09:09:32 PM"/>
+        <attribute name="created" value="ZXJpY2g7TEFQVE9QLUtMVDI4RzVJOzIwMjItMDktMjQ7MDk6MDU6MzQgUE07Mjg1Ng=="/>
+        <attribute name="edited" value="ZXJpY2g7TEFQVE9QLUtMVDI4RzVJOzIwMjItMDktMjQ7MDk6MDk6MzIgUE07MTsyOTY2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n1" type="Real" array="False" size=""/>
+            <declare name="T" type="Real" array="False" size=""/>
+            <input variable="n1"/>
+            <assign variable="t" expression="n1 * 0.15"/>
+            <output expression="t" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
