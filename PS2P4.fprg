@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="erich"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-02 09:47:59 PM"/>
+        <attribute name="created" value="ZXJpY2g7TEFQVE9QLUtMVDI4RzVJOzIwMjItMTAtMDI7MDk6Mzc6MzkgUE07Mjg1NA=="/>
+        <attribute name="edited" value="ZXJpY2g7TEFQVE9QLUtMVDI4RzVJOzIwMjItMTAtMDI7MDk6NDc6NTkgUE07MTsyOTY1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lname" type="String" array="False" size=""/>
+            <declare name="credits" type="Real" array="False" size=""/>
+            <declare name="cph" type="Real" array="False" size=""/>
+            <declare name="labfee" type="Real" array="False" size=""/>
+            <declare name="tuition" type="Real" array="False" size=""/>
+            <input variable="credits"/>
+            <assign variable="cph" expression="250"/>
+            <assign variable="labfee" expression="100"/>
+            <assign variable="tuition" expression="credits * CPH + labfee"/>
+            <output expression="&quot;This is your tuition for the semester &quot; &amp; tuition" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

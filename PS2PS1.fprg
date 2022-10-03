@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="erich"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-09-27 08:03:11 PM"/>
+        <attribute name="created" value="ZXJpY2g7TEFQVE9QLUtMVDI4RzVJOzIwMjItMDktMjc7MDc6NDg6NTMgUE07Mjg2NQ=="/>
+        <attribute name="edited" value="ZXJpY2g7TEFQVE9QLUtMVDI4RzVJOzIwMjItMDktMjc7MDg6MDM6MTEgUE07MTsyOTU5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="ppu" type="Real" array="False" size=""/>
+            <declare name="EP" type="Real" array="False" size=""/>
+            <output expression="&quot;please enter quantity ordered&quot;" newline="True"/>
+            <input variable="qty"/>
+            <output expression="&quot;please enter price per unit&quot;" newline="True"/>
+            <input variable="ppu"/>
+            <assign variable="EP" expression="qty * ppu"/>
+            <output expression="&quot;your extended price is &quot; &amp; ep" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
