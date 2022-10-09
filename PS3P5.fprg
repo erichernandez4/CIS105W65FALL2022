@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="erich"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-05 07:27:01 PM"/>
+        <attribute name="created" value="ZXJpY2g7TEFQVE9QLUtMVDI4RzVJOzIwMjItMTAtMDU7MDY6NDg6MTIgUE07Mjg0Nw=="/>
+        <attribute name="edited" value="ZXJpY2g7TEFQVE9QLUtMVDI4RzVJOzIwMjItMTAtMDU7MDc6Mjc6MDEgUE07MTsyOTUx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="dependents" type="Real" array="False" size=""/>
+            <declare name="grossincome" type="Real" array="False" size=""/>
+            <declare name="adjgrossincome" type="Real" array="False" size=""/>
+            <declare name="tax" type="Real" array="False" size=""/>
+            <declare name="incometax" type="Real" array="False" size=""/>
+            <input variable="lastname"/>
+            <input variable="dependents"/>
+            <input variable="grossincome"/>
+            <assign variable="adjgrossincome" expression="grossincome - (dependents * 12000.00)"/>
+            <if expression="adjgrossincome &gt; 50000.00">
+                <then>
+                    <assign variable="tax" expression="0.20"/>
+                </then>
+                <else>
+                    <assign variable="tax" expression="0.10"/>
+                </else>
+            </if>
+            <assign variable="incometax" expression="adjgrossincome * tax"/>
+            <if expression="incometax &lt; 0">
+                <then>
+                    <assign variable="incometax" expression="100.00"/>
+                </then>
+                <else>
+                    <assign variable="incometax" expression="0"/>
+                </else>
+            </if>
+            <output expression="&quot;Last name: &quot; &amp; lastname" newline="True"/>
+            <output expression="&quot;This is your gross income &quot; &amp; grossincome" newline="True"/>
+            <output expression="&quot;Number of dependants &quot; &amp; dependents" newline="True"/>
+            <output expression="&quot;This is the adjusted gross income &quot; &amp; adjgrossincome" newline="True"/>
+            <output expression="&quot;This is your income tax &quot; &amp; incometax" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
