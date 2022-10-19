@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="erich"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-10-18 10:57:50 PM"/>
+        <attribute name="created" value="ZXJpY2g7TEFQVE9QLUtMVDI4RzVJOzIwMjItMTAtMTg7MDQ6MDE6NDEgUE07Mjg0MA=="/>
+        <attribute name="edited" value="ZXJpY2g7TEFQVE9QLUtMVDI4RzVJOzIwMjItMTAtMTg7MTA6NTc6NTAgUE07OTsyOTY0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="qty" type="Real" array="False" size=""/>
+            <declare name="response" type="String" array="False" size=""/>
+            <declare name="price" type="Real" array="False" size=""/>
+            <declare name="counter" type="Real" array="False" size=""/>
+            <assign variable="counter" expression="0"/>
+            <declare name="totaldis" type="Real" array="False" size=""/>
+            <assign variable="totaldis" expression="0"/>
+            <declare name="extprice" type="Real" array="False" size=""/>
+            <declare name="discount" type="Real" array="False" size=""/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <output expression="&quot;Do you want to start this program&quot;" newline="True"/>
+            <input variable="response"/>
+            <while expression="response == &quot;yes&quot;">
+                <assign variable="counter" expression="counter + 1"/>
+                <output expression="&quot;enter quantity&quot;" newline="True"/>
+                <input variable="qty"/>
+                <output expression="&quot;enter the price of item&quot;" newline="True"/>
+                <input variable="price"/>
+                <assign variable="extprice" expression="qty * price"/>
+                <if expression="extprice &gt; 10000">
+                    <then>
+                        <assign variable="discount" expression="extprice * 0.25"/>
+                    </then>
+                    <else>
+                        <assign variable="discount" expression="extprice * 0.10"/>
+                    </else>
+                </if>
+                <assign variable="total" expression="extprice - discount"/>
+                <output expression="&quot;extended price &quot; &amp; extprice" newline="True"/>
+                <output expression="&quot;discount amount &quot;&amp; discount" newline="True"/>
+                <output expression="&quot;total&quot; &amp; total" newline="True"/>
+                <assign variable="totaldis" expression="totaldis + discount"/>
+                <output expression="&quot;Do you want to start this program&quot;" newline="True"/>
+                <input variable="response"/>
+            </while>
+            <output expression="&quot;all of total discounts&quot; &amp; totaldis" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
