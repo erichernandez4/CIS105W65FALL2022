@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="erich"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 02:36:35 PM"/>
+        <attribute name="created" value="ZXJpY2g7TEFQVE9QLUtMVDI4RzVJOzIwMjItMTEtMDQ7MDI6MDM6MDQgUE07MjgzNQ=="/>
+        <attribute name="edited" value="ZXJpY2g7TEFQVE9QLUtMVDI4RzVJOzIwMjItMTEtMDQ7MDI6MzY6MzUgUE07NjsyOTU4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="hits" type="Real" array="False" size=""/>
+            <declare name="bats" type="Real" array="False" size=""/>
+            <declare name="average" type="Integer" array="False" size=""/>
+            <input variable="lastname"/>
+            <input variable="hits"/>
+            <input variable="bats"/>
+            <call expression="totalavg(hits,bats)"/>
+            <assign variable="average" expression="totalavg(hits,bats)"/>
+            <output expression="lastname" newline="True"/>
+            <output expression="average" newline="True"/>
+        </body>
+    </function>
+    <function name="totalavg" type="Integer" variable="average">
+        <parameters>
+            <parameter name="hits" type="Integer" array="False"/>
+            <parameter name="bats" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="average" type="Integer" array="False" size=""/>
+            <assign variable="average" expression="hits / bats"/>
+        </body>
+    </function>
+</flowgorithm>
